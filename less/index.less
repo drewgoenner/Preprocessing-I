@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -57,3 +57,66 @@ html, body {
     height: 100%;
 }
 
+@header-font: 'Lobster', cursive;
+@fav-color:green;
+
+.header(){
+	font-family: @header-font;
+	font-size: 4rem;
+	
+}
+
+.flex-column(){
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	.header();
+}
+
+.container {
+	.flex-column();
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	border: 1px solid red;
+	header{
+		display: flex;
+		width: 90%;
+		border: 1px solid green;
+		nav{
+			display: flex;
+			justify-content: center;
+			border: 1px solid red;
+			width: 100%;
+			background: @fav-color;
+
+			a{
+				margin: 1%;
+				text-decoration: none;
+				color: skyblue;
+				border: 1px solid red;
+			}//a close
+		}//nav close
+
+	}//header close
+
+	.main-content {
+		.flex-column();
+
+		border: 1px solid red;
+		.main-top {
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			border: 1px solid red;
+
+			h1{
+				width: 50%;
+				border: 1px solid red;
+			}
+		}//main-top close
+	}//main-content close
+}//container close

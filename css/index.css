@@ -86,7 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -133,4 +133,49 @@ table {
 html,
 body {
   height: 100%;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 4rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 1px solid red;
+}
+.container header {
+  display: flex;
+  width: 90%;
+  border: 1px solid green;
+}
+.container header nav {
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+  width: 100%;
+  background: green;
+}
+.container header nav a {
+  margin: 1%;
+  text-decoration: none;
+  color: skyblue;
+  border: 1px solid red;
+}
+.container .main-content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+.container .main-content .main-top {
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid red;
+}
+.container .main-content .main-top h1 {
+  width: 50%;
+  border: 1px solid red;
 }
