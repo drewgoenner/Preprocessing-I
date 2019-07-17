@@ -86,7 +86,7 @@ html, body {
 
 .mobhist(){
 	@media screen and (max-width: 500px){
-		width: 50%;
+		width: 90%;
 		margin: 2%;
 		align-self: center;
 
@@ -104,8 +104,9 @@ body{
 
 
 .container {
-
-	
+	@media screen and (max-width: 500px){
+		background: lightgray;
+	}
 	
 	.flex-column();
 	align-items: center;
@@ -224,6 +225,8 @@ body{
 				}
 			}//center-content close
 		}//main-top close
+
+		
 		.main-middle{
 			display: flex;
 			@media screen and (max-width: 500px){
@@ -233,30 +236,44 @@ body{
 			width: 100%;
 			border-top: 1px solid @fav-color;
 			border-bottom: 1px solid @fav-color;
-
-
+			
+			
 		
-		@media screen and (max-width: 500px){
-			display: none;		
-			.video{					
+			
+			.video{		
+				@media screen and (max-width: 500px){
+					display: none;
+				}			
 				width: 30%;
 			}
 		
 
 			.middle-text{
+				@media screen and (max-width: 500px){
+					display: none;
+				}
 				width: 30%;
 				align-self: center;
 				
 
 				h2{
+					@media screen and (max-width: 500px){
+						display: none;
+					}
 					font-size: 1.5rem;
 					margin: 1%;
 					border-bottom: 1px solid @fav-color;
 				}
 			}
-		}
+		
+		
 
 			.skills{
+
+				@media screen and (max-width: 500px){
+					width: 75%;
+					align-self: center;
+				}
 				
 				width: 30%;
 				h3{

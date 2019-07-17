@@ -145,6 +145,11 @@ body .container {
   flex-wrap: wrap;
   width: 100%;
 }
+@media screen and (max-width: 500px) {
+  body .container {
+    background: lightgray;
+  }
+}
 body .container header {
   width: 70%;
 }
@@ -269,25 +274,41 @@ body .container .main-content .main-middle {
     flex-direction: column;
   }
 }
+body .container .main-content .main-middle .video {
+  width: 30%;
+}
 @media screen and (max-width: 500px) {
-  body .container .main-content .main-middle {
+  body .container .main-content .main-middle .video {
     display: none;
   }
-  body .container .main-content .main-middle .video {
-    width: 30%;
-  }
+}
+body .container .main-content .main-middle .middle-text {
+  width: 30%;
+  align-self: center;
+}
+@media screen and (max-width: 500px) {
   body .container .main-content .main-middle .middle-text {
-    width: 30%;
-    align-self: center;
+    display: none;
   }
+}
+body .container .main-content .main-middle .middle-text h2 {
+  font-size: 1.5rem;
+  margin: 1%;
+  border-bottom: 1px solid green;
+}
+@media screen and (max-width: 500px) {
   body .container .main-content .main-middle .middle-text h2 {
-    font-size: 1.5rem;
-    margin: 1%;
-    border-bottom: 1px solid green;
+    display: none;
   }
 }
 body .container .main-content .main-middle .skills {
   width: 30%;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-middle .skills {
+    width: 75%;
+    align-self: center;
+  }
 }
 body .container .main-content .main-middle .skills h3 {
   font-size: 1.7rem;
@@ -328,7 +349,7 @@ body .container .main-content .main-bottom .history .young-me {
 }
 @media screen and (max-width: 500px) {
   body .container .main-content .main-bottom .history .young-me {
-    width: 50%;
+    width: 90%;
     margin: 2%;
     align-self: center;
   }
@@ -345,7 +366,7 @@ body .container .main-content .main-bottom .history .belly-rub {
 }
 @media screen and (max-width: 500px) {
   body .container .main-content .main-bottom .history .belly-rub {
-    width: 50%;
+    width: 90%;
     margin: 2%;
     align-self: center;
   }
@@ -363,7 +384,7 @@ body .container .main-content .main-bottom .history .staring {
 }
 @media screen and (max-width: 500px) {
   body .container .main-content .main-bottom .history .staring {
-    width: 50%;
+    width: 90%;
     margin: 2%;
     align-self: center;
   }
