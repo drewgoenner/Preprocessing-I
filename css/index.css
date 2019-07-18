@@ -1,1 +1,400 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 4rem;
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  body .container {
+    background: lightgray;
+  }
+}
+body .container header {
+  width: 70%;
+}
+@media screen and (max-width: 500px) {
+  body .container header {
+    justify-content: center;
+    width: 25%;
+  }
+}
+body .container header nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: green;
+}
+@media screen and (max-width: 500px) {
+  body .container header nav {
+    flex-direction: column;
+  }
+}
+body .container header nav a {
+  margin: 1%;
+  text-decoration: none;
+  color: skyblue;
+}
+@media screen and (max-width: 500px) {
+  body .container header nav a {
+    border: 1px solid black;
+    margin: 5%;
+  }
+}
+body .container .main-content {
+  width: 70%;
+}
+body .container .main-content .main-top {
+  display: flex;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body .container .main-content .main-top .pic-cap {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin: 1%;
+}
+body .container .main-content .main-top .pic-cap img {
+  margin: 1%;
+  width: 100%;
+  flex-direction: row;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-top .pic-cap img {
+    width: 200%;
+    align-self: center;
+  }
+}
+body .container .main-content .main-top .pic-cap p {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-top .pic-cap p {
+    display: none;
+  }
+}
+body .container .main-content .main-top .center-content {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-top .center-content {
+    align-items: center;
+  }
+}
+body .container .main-content .main-top .center-content h1 {
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-top .center-content h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 0 2% 0;
+  }
+}
+body .container .main-content .main-top .center-content p {
+  margin: 1%;
+  width: 50%;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-top .center-content p {
+    width: 100%;
+    border: 1px solid black;
+    padding: 3%;
+  }
+}
+body .container .main-content .main-top .center-content button {
+  margin: 2% 0 0 1%;
+  width: 10%;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-top .center-content button {
+    width: 25%;
+  }
+}
+body .container .main-content .main-top .center-content hr {
+  width: 60%;
+  margin: 4% 2% 2% 2%;
+}
+body .container .main-content .main-middle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-middle {
+    flex-direction: column;
+  }
+}
+body .container .main-content .main-middle .video {
+  width: 30%;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-middle .video {
+    display: none;
+  }
+}
+body .container .main-content .main-middle .middle-text {
+  width: 30%;
+  align-self: center;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-middle .middle-text {
+    display: none;
+  }
+}
+body .container .main-content .main-middle .middle-text h2 {
+  font-size: 1.5rem;
+  margin: 1%;
+  border-bottom: 1px solid green;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-middle .middle-text h2 {
+    display: none;
+  }
+}
+body .container .main-content .main-middle .skills {
+  width: 30%;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-middle .skills {
+    width: 75%;
+    align-self: center;
+  }
+}
+body .container .main-content .main-middle .skills h3 {
+  font-size: 1.7rem;
+  margin: 1%;
+  justify-content: center;
+  border: 1px solid green;
+}
+body .container .main-content .main-middle .skills ul {
+  border: 1px solid green;
+}
+body .container .main-content .main-bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-bottom {
+    flex-direction: column;
+  }
+}
+body .container .main-content .main-bottom h3 {
+  font-size: 1.7rem;
+  margin: 1%;
+  width: 100%;
+  text-align: center;
+}
+body .container .main-content .main-bottom .history {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-bottom .history {
+    flex-direction: column;
+  }
+}
+body .container .main-content .main-bottom .history .young-me {
+  width: 25%;
+  margin: 1%;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-bottom .history .young-me {
+    width: 90%;
+    margin: 2%;
+    align-self: center;
+  }
+  body .container .main-content .main-bottom .history .young-me img {
+    width: 90%;
+  }
+}
+body .container .main-content .main-bottom .history .young-me img {
+  width: 90%;
+}
+body .container .main-content .main-bottom .history .belly-rub {
+  width: 25%;
+  margin: 1%;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-bottom .history .belly-rub {
+    width: 90%;
+    margin: 2%;
+    align-self: center;
+  }
+  body .container .main-content .main-bottom .history .belly-rub img {
+    width: 90%;
+  }
+}
+body .container .main-content .main-bottom .history .belly-rub img {
+  width: 90%;
+}
+body .container .main-content .main-bottom .history .staring {
+  width: 25%;
+  margin: 1%;
+  margin: 0 0 4% 0;
+}
+@media screen and (max-width: 500px) {
+  body .container .main-content .main-bottom .history .staring {
+    width: 90%;
+    margin: 2%;
+    align-self: center;
+  }
+  body .container .main-content .main-bottom .history .staring img {
+    width: 90%;
+  }
+}
+body .container .main-content .main-bottom .history .staring img {
+  width: 90%;
+}
+body .container footer {
+  align-self: center;
+}

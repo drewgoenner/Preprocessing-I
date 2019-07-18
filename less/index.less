@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -57,3 +57,285 @@ html, body {
     height: 100%;
 }
 
+@header-font: 'Lobster', cursive;
+@fav-color:green;
+
+.header(){
+	font-family: @header-font;
+	font-size: 4rem;
+	
+}
+
+.subhead(){
+	font-size: 1.7rem;
+}
+
+.flex-column(){
+	display: flex;
+	flex-direction: column;
+}
+
+.historypics(){
+	width: 25%;
+	margin: 1%;
+
+	img{
+	width: 90%;
+	}
+}
+
+.mobhist(){
+	@media screen and (max-width: 500px){
+		width: 90%;
+		margin: 2%;
+		align-self: center;
+
+		img{
+			width: 90%;
+		}
+	}
+}
+
+
+h1 {
+	.header();
+}
+body{
+
+
+.container {
+	@media screen and (max-width: 500px){
+		background: lightgray;
+	}
+	
+	.flex-column();
+	align-items: center;
+	// justify-content: center;
+	
+	flex-wrap: wrap;
+	width: 100%;
+	
+	header{
+		// display: flex;
+		width: 70%;
+		@media screen and (max-width: 500px){
+			justify-content: center;
+			width: 25%
+		}
+		nav{
+			display: flex;
+			@media screen and (max-width: 500px){
+				flex-direction: column;				
+			}
+			justify-content: center;
+			width: 100%;
+			background: @fav-color;
+
+			a{
+				@media screen and (max-width: 500px){
+					border: 1px solid black;
+					margin: 5%;
+				}
+				margin: 1%;
+				text-decoration: none;
+				color: skyblue;
+				
+			}//a close
+		}//nav close
+
+	}//header close
+
+	.main-content {
+		width: 70%;
+				
+		.main-top {
+			display: flex;
+			@media screen and (max-width: 500px){
+				.flex-column();
+				align-items: center;
+			}
+			
+			// .flex-column();
+			// flex-wrap: wrap;
+			// justify-content: space-between;
+			// align-items: center;
+			
+
+			.pic-cap {
+				.flex-column();
+				width: 35%;
+				margin: 1%;
+
+				img{
+					// align-self: flex-start;
+					@media screen and (max-width: 500px){
+						width: 200%;
+						align-self: center;
+					}
+					margin: 1%;
+					width: 100%;
+					flex-direction: row;
+					
+					}//img close
+
+				p{
+					@media screen and (max-width: 500px){
+						display: none;
+					}
+					font-size: 1.5rem;
+				}//p close
+			}//pic-cap close
+
+			.center-content {
+
+				@media screen and (max-width: 500px){
+					align-items: center;
+				}
+				.flex-column();
+
+				h1{width: 100%;
+					@media screen and (max-width: 500px){
+						font-size: 3rem;
+						text-align: center;
+						margin: 0 0 2% 0;
+					}
+				}
+				p{
+					@media screen and (max-width: 500px){
+						width: 100%;
+						border: 1px solid black;
+						padding: 3%;
+					}
+					margin: 1%;
+					width: 50%;
+					
+				}
+				button{
+
+					@media screen and (max-width: 500px){
+						width: 25%;
+					}
+					margin: 2% 0 0 1%;
+					width: 10%;
+				}
+
+				hr{
+					width: 60%;
+					margin: 4% 2% 2% 2%;
+				}
+			}//center-content close
+		}//main-top close
+
+		
+		.main-middle{
+			display: flex;
+			@media screen and (max-width: 500px){
+				flex-direction: column;
+			}
+			justify-content: space-between;
+			width: 100%;
+			border-top: 1px solid @fav-color;
+			border-bottom: 1px solid @fav-color;
+			
+			
+		
+			
+			.video{		
+				@media screen and (max-width: 500px){
+					display: none;
+				}			
+				width: 30%;
+			}
+		
+
+			.middle-text{
+				@media screen and (max-width: 500px){
+					display: none;
+				}
+				width: 30%;
+				align-self: center;
+				
+
+				h2{
+					@media screen and (max-width: 500px){
+						display: none;
+					}
+					font-size: 1.5rem;
+					margin: 1%;
+					border-bottom: 1px solid @fav-color;
+				}
+			}
+		
+		
+
+			.skills{
+
+				@media screen and (max-width: 500px){
+					width: 75%;
+					align-self: center;
+				}
+				
+				width: 30%;
+				h3{
+					.subhead();
+					margin: 1%;
+					justify-content: center;
+					border: 1px solid @fav-color;
+				}
+
+				ul{
+					border: 1px solid @fav-color;
+				}
+			}
+
+		}
+
+		.main-bottom{
+			display: flex;
+			@media screen and (max-width: 500px){
+				flex-direction: column;
+			}
+			flex-wrap: wrap;
+
+			h3{
+				.subhead();
+				margin: 1%;
+				width: 100%;
+				text-align: center;
+			}
+
+			.history{
+				@media screen and (max-width: 500px){
+					flex-direction: column;
+				}
+
+				display: flex;
+				justify-content: space-evenly;
+
+				.young-me{
+					.mobhist();
+					.historypics();
+				}
+	
+				.belly-rub{
+					.mobhist();
+					.historypics();
+				}
+
+				.staring{
+					.mobhist();
+					.historypics();
+					margin: 0 0 4% 0;
+				}
+
+			}
+
+			
+		}
+	}//main-content close
+
+	footer{
+		align-self: center;
+	}
+}//container close
+}
